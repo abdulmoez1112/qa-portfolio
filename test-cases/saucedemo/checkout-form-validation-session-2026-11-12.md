@@ -56,4 +56,4 @@ Verdict: STILL REPRODUCES. Input routed to the Last Name field writes into First
 ## Notes
 
 - standard_user checkout remains fully functional; all Part 1 acceptances completed step one normally.
-- No new bug filed today: Parts 2 and 3 update existing reports BR-001 and BR-003; the changed product set in Part 2 is recorded here and in the bug register rather than as a new report.
+- No new bug filed today: Parts 2 and 3 update existing reports BR-001 and BR-003; the changed product set in Part 2 is recorded here and in the bug reports index rather than as a new report.
