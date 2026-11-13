@@ -3,6 +3,7 @@
 - Date: 13 Nov 2026, ~18:26-18:28 PKT
 - Environment: Chrome (cloud browser), desktop viewport, https://www.saucedemo.com
 - Profile: standard_user (fresh login; cart verified empty at start)
+- Site context: SauceDemo is a public demo app maintained by Sauce Labs for testing practice; all findings here are against a demo environment, not a live store
 - Scope: state and sequence negatives on the checkout flow. Field-level negatives (empty fields, bad postal, long inputs) were covered in the 12 Nov session and are not repeated here.
 
 ## Results
@@ -15,7 +16,7 @@
 | N4 | Cancel on checkout step one | Return to cart, cart preserved | Landed on /cart.html, item still in cart (badge 1) | PASS |
 | N5 | Cancel on checkout step two | Same as N4 for consistency | Landed on /inventory.html instead of cart; item preserved | PASS with inconsistency note |
 | N6 | Revisit step one after cancelling | Data preserved, or explicitly cleared | All three fields empty - silently discarded | Observation (acceptable, but unfriendly) |
-| N7 | Complete a real order ($32.39), browser Back from confirmation, click Finish again | Second submission refused - no order exists anymore | Step two re-rendered with Total $0.00 and a live Finish button; clicking it produced a SECOND "Thank you for your order!" | FAIL |
+| N7 | Complete a real order ($32.39), browser Back from confirmation, click Finish again | Second submission refused - no order exists anymore | Step two re-rendered with Total $0.00 and a live Finish button; clicking it produced a SECOND "Thank you for your order!" confirmation screen | FAIL (frontend guard missing; backend duplicate unverified) |
 
 ## Confirmed findings
 
@@ -24,7 +25,7 @@ All four FAILs share one root cause - the checkout flow performs no state valida
 1. An order for zero items at $0.00 is accepted and "dispatched" (N1)
 2. Any checkout page is reachable directly, in any session state (N2, N3)
 3. A phantom confirmation page exists with no order at all (N3)
-4. Browser Back after a completed order allows a second submission (N7)
+4. Browser Back after a completed order allows a second submission and a second confirmation screen (N7) - whether the backend records a second order cannot be verified from the UI; there is no order history page in this demo
 
 ## Consistency note (not filed)
 
