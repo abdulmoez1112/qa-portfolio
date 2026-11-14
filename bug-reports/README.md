@@ -13,6 +13,7 @@ Practice bug reports from hands-on sessions on https://www.saucedemo.com (a demo
 | [BR-005](saucedemo/BR-005-remove-button-fails-error-user.md) | Remove button does not remove items | error_user | Medium | Medium | 2026-10-22 |
 | [BR-006](saucedemo/BR-006-prices-change-on-reload-visual-user.md) | Prices change on every page load | visual_user | High | High | 2026-10-22 |
 | [BR-007](saucedemo/BR-007-checkout-no-state-validation.md) | Checkout has no state validation: empty-cart orders, direct URL access to any step, double submission | standard_user | High | High | 2026-11-13 |
+| [BR-008](saucedemo/BR-008-cart-page-remove-visual-only.md) | Cart-page Remove is visual-only; item stays in cart and returns | standard_user | High | High | 2026-11-14 |
 
 ## Re-test status
 
@@ -25,6 +26,7 @@ Practice bug reports from hands-on sessions on https://www.saucedemo.com (a demo
 | BR-005 | - | Not yet re-tested | - |
 | BR-006 | 2026-11-09 | Still reproduces; prices randomize on every load, none match the catalog | [9 Nov re-test](../test-cases/saucedemo/retest-BR-006-BR-002-2026-11-09.md) |
 | BR-007 | - | Found 2026-11-13 on standard_user; not yet re-tested | [13 Nov session](../test-cases/saucedemo/negative-checkout-session-2026-11-13.md) |
+| BR-008 | - | Found 2026-11-14 on standard_user; not yet re-tested | [14 Nov session](../test-cases/saucedemo/exploratory-cart-state-session-2026-11-14.md) |
 
 ## Guides
 
