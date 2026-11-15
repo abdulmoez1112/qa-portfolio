@@ -11,7 +11,7 @@
 
 ## Summary
 
-The shopping cart icon in the page header is an `<a>` element with no `href` attribute and no `tabindex`. It never receives keyboard focus, so a keyboard-only user cannot open the cart page from any page of the shop. The cart and the entire checkout flow are mouse-only.
+The shopping cart icon in the page header is an `<a>` element with no `href` attribute and no `tabindex`. It never receives keyboard focus, so a keyboard-only user cannot open the cart page by keyboard (verified on the inventory and cart pages; the icon lives in the shared page header). The cart page's own controls (Remove, Continue Shopping, Checkout) are keyboard-operable once reached - the block is reaching the cart, not using it. Net effect: the cart and the entire checkout flow are unreachable without a mouse.
 
 ## Steps to reproduce
 
