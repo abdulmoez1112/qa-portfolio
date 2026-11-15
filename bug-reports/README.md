@@ -14,6 +14,8 @@ Practice bug reports from hands-on sessions on https://www.saucedemo.com (a demo
 | [BR-006](saucedemo/BR-006-prices-change-on-reload-visual-user.md) | Prices change on every page load | visual_user | High | High | 2026-10-22 |
 | [BR-007](saucedemo/BR-007-checkout-no-state-validation.md) | Checkout has no state validation: empty-cart orders, direct URL access to any step, double submission | standard_user | High | High | 2026-11-13 |
 | [BR-008](saucedemo/BR-008-cart-page-remove-visual-only.md) | Cart-page Remove is visual-only; item stays in cart and returns | standard_user | High | High | 2026-11-14 |
+| [BR-009](saucedemo/BR-009-cart-link-not-keyboard-operable.md) | Cart link is not keyboard-operable; cart and checkout unreachable without a mouse | standard_user | High | High | 2026-11-15 |
+| [BR-010](saucedemo/BR-010-no-visible-focus-indicator.md) | No visible focus indicator on any interactive element | standard_user | High | High | 2026-11-15 |
 
 ## Re-test status
 
@@ -27,6 +29,8 @@ Practice bug reports from hands-on sessions on https://www.saucedemo.com (a demo
 | BR-006 | 2026-11-09 | Still reproduces; prices randomize on every load, none match the catalog | [9 Nov re-test](../test-cases/saucedemo/retest-BR-006-BR-002-2026-11-09.md) |
 | BR-007 | - | Found 2026-11-13 on standard_user; not yet re-tested | [13 Nov session](../test-cases/saucedemo/negative-checkout-session-2026-11-13.md) |
 | BR-008 | - | Found 2026-11-14 on standard_user; not yet re-tested | [14 Nov session](../test-cases/saucedemo/exploratory-cart-state-session-2026-11-14.md) |
+| BR-009 | - | Found 2026-11-15 on standard_user (keyboard-only run); not yet re-tested | [15 Nov session](../test-cases/saucedemo/keyboard-only-session-2026-11-15.md) |
+| BR-010 | - | Found 2026-11-15 on standard_user (keyboard-only run); not yet re-tested | [15 Nov session](../test-cases/saucedemo/keyboard-only-session-2026-11-15.md) |
 
 ## Guides
 
@@ -35,5 +39,5 @@ Practice bug reports from hands-on sessions on https://www.saucedemo.com (a demo
 
 ## Related evidence
 
-- Session logs live in `test-cases/saucedemo/` (sort + cart badge, login partitions, number/postal boundaries, checkout form validation).
+- Session logs live in `test-cases/saucedemo/` (sort + cart badge, login partitions, number/postal boundaries, checkout form validation, keyboard-only run).
 - Issue #1 summarises the 21 Oct - 3 Nov practice routine these reports came from.
