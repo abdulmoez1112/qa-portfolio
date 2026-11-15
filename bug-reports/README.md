@@ -15,7 +15,7 @@ Practice bug reports from hands-on sessions on https://www.saucedemo.com (a demo
 | [BR-007](saucedemo/BR-007-checkout-no-state-validation.md) | Checkout has no state validation: empty-cart orders, direct URL access to any step, double submission | standard_user | High | High | 2026-11-13 |
 | [BR-008](saucedemo/BR-008-cart-page-remove-visual-only.md) | Cart-page Remove is visual-only; item stays in cart and returns | standard_user | High | High | 2026-11-14 |
 | [BR-009](saucedemo/BR-009-cart-link-not-keyboard-operable.md) | Cart link is not keyboard-operable; cart and checkout unreachable without a mouse | standard_user | High | High | 2026-11-15 |
-| [BR-010](saucedemo/BR-010-no-visible-focus-indicator.md) | No visible focus indicator on any interactive element | standard_user | High | High | 2026-11-15 |
+| [BR-010](saucedemo/BR-010-no-visible-focus-indicator.md) | No visible focus indicator on the login, inventory and cart pages tested | standard_user | High | High | 2026-11-15 |
 
 ## Re-test status
 
