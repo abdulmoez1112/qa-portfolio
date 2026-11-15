@@ -1,4 +1,4 @@
-# BR-010: No visible focus indicator on any interactive element - keyboard focus is invisible
+# BR-010: No visible focus indicator on the login, inventory and cart pages - keyboard focus is invisible where it lands
 
 - Date found: 2026-11-15
 - Found by: Abdul Moez
