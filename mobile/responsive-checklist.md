@@ -26,7 +26,7 @@ hardware before calling them device-confirmed.
 ## 3. Controls and tap targets
 
 - [ ] Every interactive element stays visible and operable at each width.
-- [ ] Tap target sizes recorded in CSS pixels; compare against WCAG 2.2 SC 2.5.8 (24x24 minimum, AA) and SC 2.5.5 (44x44, AAA).
+- [ ] Tap target sizes recorded in CSS pixels. Evaluate against WCAG 2.2 SC 2.5.8 (24x24, AA) including its spacing/equivalent/inline/user-agent/essential exceptions before calling anything a failure; SC 2.5.5 (44x44) is AAA, not a universal AA requirement.
 - [ ] Controls that collapse into icons (e.g. a sort dropdown rendered as a funnel icon) still expose their function to assistive tech (accessible name present).
 - [ ] Full-width buttons do not stretch so far they look like static banners.
 
