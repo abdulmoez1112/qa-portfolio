@@ -9,8 +9,10 @@
 - Size B: 820x1180 CSS px, iPad OS 17.0 Safari UA, mobile emulation ON.
 - This is EMULATION. No physical device was used. Touch gestures, landscape
   orientation, Android, real Safari, and the checkout form pages were NOT tested.
-- Starting state: cart already contained 1 Sauce Labs Backpack persisted from the
-  2026-11-18 session (expected; cart persistence observed on 14 Nov).
+- Starting state: cart already contained 1 Sauce Labs Backpack carried over from
+  the 2026-11-18 session. Cart persistence across sessions was previously observed
+  on 14 Nov; whether persistence is intended product behavior is UNCONFIRMED (no
+  requirements source exists for this demo app).
 
 ## Results at 390x844 (emulated mobile)
 
@@ -22,7 +24,7 @@
 | M4 | Sort control works at mobile width | PASS | Native select rendered as 40x30 icon; selected "Price (low to high)", verified exact order $7.99, $9.99, $15.99, $15.99, $29.99, $49.99 |
 | M5 | Cart page layout at mobile | PASS | No overflow; QTY/description readable; Continue Shopping (360x34) and Checkout (360x32) full-width; footer social icons render in a row |
 | M6 | Inventory product card internal spacing | OBSERVATION O1 | ~256px of empty vertical space between description and price inside each card (measured: card height 767px, gap 256px); price and Add/Remove button pushed far below content. Visually confirmed in screenshot. Not seen on the cart page item (compact). |
-| M7 | Tap target sizes vs WCAG 2.2 | OBSERVATION O2 | Burger menu button 20x20 CSS px (below SC 2.5.8 24x24 AA minimum); sort select 40x30; Add/Remove buttons 306x34; Checkout 360x32 (all below SC 2.5.5 44x44 AAA guideline) |
+| M7 | Tap target sizes (measurement only) | OBSERVATION O2 | Measured CSS px: burger menu button 20x20, sort select 40x30, Add/Remove 306x34, Checkout 360x32. Measurements only, NOT nonconformance findings: WCAG 2.2 SC 2.5.8 (AA, 24x24) has spacing/equivalent/inline/user-agent/essential exceptions that this session did not evaluate, and SC 2.5.5 (44x44) is AAA, not an AA requirement |
 
 ## Results at 820x1180 (emulated tablet)
 
@@ -37,10 +39,12 @@
 
 - O1 and O2 are emulation results on a demo app. Before filing O1 as a layout
   defect or O2 as an accessibility defect, re-test on a physical device: emulation
-  can misrepresent rendering, and target-size exceptions (e.g. spacing) need
-  real-layout confirmation.
-- The burger-menu 20x20 target (O2) overlaps with BR-010's accessibility theme but
-  is a different success criterion (target size, not focus visibility).
+  can misrepresent rendering, and SC 2.5.8's documented exceptions need evaluation
+  against the real layout.
+- The burger-menu 20x20 measurement (O2) sits in the target-size area (WCAG 2.2
+  SC 2.5.8), distinct from BR-010's focus-visibility criterion (SC 2.4.7). Whether
+  2.5.8 is met depends on its exceptions (spacing, equivalent, inline, user agent
+  control, essential), which were not evaluated here.
 
 ## What was NOT covered
 
